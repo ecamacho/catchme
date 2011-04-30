@@ -8,16 +8,16 @@
         <g:javascript library="application" />
     </head>
     <body>
-        <div id="spinner" class="spinner" style="display:none;">
-            <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
-        </div>
-        <div id="grailsLogo"><a href="http://grails.org"><img src="${resource(dir:'images',file:'grails_logo.png')}" alt="Grails" border="0" /></a></div>
+        <div id="content">
+        <div id="logo">
+			<h1><a href="index.html">CatchMe</a></h1>
+		</div>
+		<ul id="menu">
+			<li><a href="#">About</a></li>
+		</ul>
+		<div class="line"></div>
         <g:layoutBody />
 		<g:facebookConnectJavascript/>
-		<script>
-		      FB.Event.subscribe('auth.login', function () {
-		          window.location = "http://localhost:8080/catchme/configuration";
-		      });
-		  </script>
+        </div>
     </body>
 </html>

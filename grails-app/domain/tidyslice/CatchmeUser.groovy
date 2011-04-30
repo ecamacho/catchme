@@ -7,8 +7,9 @@ class CatchmeUser {
     String lastName
     String email
 
+    static hasMany = [ contacts : Contact ]
     static constraints = {
-        username blank: false, unique: true
+        username blank: true, unique: true
         email blank: false, unique: true
     }
 }
